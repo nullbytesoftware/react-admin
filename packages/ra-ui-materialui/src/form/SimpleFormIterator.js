@@ -73,6 +73,7 @@ const SimpleFormIterator = props => {
         resource,
         source,
         disableAdd,
+        getItemLabel = index => index + 1,
         disableRemove,
         variant,
         margin,
@@ -142,7 +143,7 @@ const SimpleFormIterator = props => {
                                 variant="body1"
                                 className={classes.index}
                             >
-                                {index + 1}
+                                {getItemLabel(index)}
                             </Typography>
                             <section className={classes.form}>
                                 {Children.map(children, (input, index2) =>
